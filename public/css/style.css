@@ -1,0 +1,25 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #353535;
+  background-color: #ffffff;
+}
+
+a:link {
+  color: #0c5772;
+  text-decoration: none;
+}
+a:hover {
+  color: #0c5772;
+  text-decoration: none;
+}
+a:visited {
+  color: #0c5772;
+  text-decoration: none;
+}
+
+/* Mobile */
+@media screen and (max-width : 480px) {
+  
+}
