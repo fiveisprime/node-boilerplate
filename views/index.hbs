@@ -1,10 +1,112 @@
-<div class="container">
-  <div class="grid_6 alpha">
-    
-  </div>
-  <div class="grid_6 omega">
-    <p>
-      Boilerplate app is running!
-    </p>
-  </div>
-</div>
+<section id="home">
+  <article class="container">
+    <div class="grid_5 alpha">
+      <img src="imgs/code.png" alt="Code" class="hero">
+    </div>
+    <div class="grid_7 omega after">
+      <h2>
+        Node.js Boilerplate
+      </h2>
+      <h3>
+        Get up and running quickly with Node.js &amp; Express
+      </h3>
+      <p>
+        Node.js boilerplate is a simple app to get you started. Clone the repo and get the app up
+        and running then start making changes. Add some routes or maybe some views; build an API;
+        install some client side packages using Bower and do something cool.
+      </p>
+      <br>
+      <a href="https://github.com/fiveisprime/node-boilerplate" class="btn github">View on GitHub</a>
+    </div>
+  </article>
+</section>
+<section id="about">
+  <article class="container">
+    <div class="grid_12 omega">
+      <h2>Getting started</h2>
+      <p>
+        So you've installed node and you want to build something, but you're having a hard time
+        getting started from nothing. Don't worry, you don't have to start from scratch after all.
+      </p>
+      <p>
+        First things first, clone this
+        <a href="https://github.com/fiveisprime/node-boilerplate" target="_blank">repository</a>
+        somewhere then change directories into your shiny new local repo and install the dependencies
+        by running the following.
+      </p>
+      
+      <div class="code">
+        <!-- I know it's not CSS, but the bash class didn't look cool enough -->
+        <pre><code class="language-css">
+npm install
+bower install
+        </code></pre>
+      </div>
+      
+      <p>
+        Next, start the app by running <code>node app.js</code> or <code>npm start</code> in your
+        terminal.
+      </p>
+      
+      <p>
+        Good job! Now let's see about adding a page to the app. To add a new page, you'll need
+        to add a route and a view (a Handlebars template). First, add the following code to
+        <span class="highlight">./routes/index.js</span>.
+      </p>
+      
+      <div class="code">
+        <small>./routes/index.js</small>
+        <pre><code class="language-javascript">
+exports.mypage = function(req, res) {
+  res.render('myview', { title: 'My New Page' });
+}
+        </code></pre>
+      </div>
+      
+      <p>
+        You'll have to create a new file in the <span class="highlight">./views</span> directory named
+        <span class="highlight">myview.hbs</span> then add the following markup.
+      </p>
+      
+      <div class="code">
+        <small>./routes/myview.hbs</small>
+        <pre><code class="language-markup">
+&lt;section&gt;
+  &lt;h1&gt;Whoa! It&#x27;s a new view!&lt;/h1&gt;
+&lt;/section&gt;
+        </code></pre>
+      </div>
+      
+      <p>
+        One more change. You created the route and the view, but now those pieces need to be connected.
+        Open up <span class="highlight">./app.js</span> and add the following route.
+      </p>
+      
+      <div class="code">
+        <small>./app.js</small>
+        <pre><code class="language-javascript">
+app.get('/mypage', routes.mypage);
+        </code></pre>
+      </div>
+      
+      <p>
+        Now start/restart the app and navigate to <a href="localhost:3000/mypage">localhost:3000/mypage</a>
+        to see your new page. Super easy, right?
+      </p>
+      <p>
+        Of course your new route doesn't have to render a view, in fact, your route can simply return
+        JSON data so you can make a single page application that hits the routes to get/post data.
+      </p>
+    </div>
+  </article>
+</section>
+
+<section id="credits">
+  <article class="container">
+    <div class="grid_12 omega">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+  </article>
+</section>

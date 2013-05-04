@@ -2,24 +2,192 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 1em;
-  color: #353535;
-  background-color: #ffffff;
+  color: #8c8c8c;
+  background-color: #0c5772;
 }
 
+h1, h2, h3, h4 {
+  color: #8c8c8c;
+}
+
+section {
+  background-attachment: fixed;
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 50px 0;
+}
+a {
+  -webkit-transition: all 0.3s ease-in-out;
+     -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+       -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
 a:link {
-  color: #0c5772;
+  color: #bf5f15;
   text-decoration: none;
 }
 a:hover {
-  color: #0c5772;
+  color: #1592bf;
   text-decoration: none;
 }
 a:visited {
-  color: #0c5772;
+  color: #bf5f15;
   text-decoration: none;
+}
+
+.menu {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: auto;
+  background-color: #0c5772;
+  z-index: 100;
+}
+
+.logo {
+  text-align: center;
+  margin: 0;
+}
+.btn {
+  text-align: center;
+  padding: 7px;
+  height: 40px;
+  font-size: 1.25em;
+}
+
+.github,
+.github:link,
+.github:visited {
+  color: #06303f;
+  background-color: #bf5f15;
+}
+
+.github,
+.github:hover {
+  color: #08536f;
+  background-color: #a85311;
+}
+.logo a:hover {
+  color: #a85311;
+}
+nav[role=navigation] {
+  text-align: right;
+  margin: 30px 0 0 0;
+}
+.navigation {
+  float: right;
+  list-style: none;
+  margin: 0;
+}
+.navigation li {
+  float: left;
+  padding: 0 0 0 50px;
+}
+
+.code {
+  padding: 25px;
+}
+.code small {
+  margin-left: 10px;
+}
+
+#home {
+  height: 250px;
+  padding: 140px 0;
+  background-color: #737373;
+  color: #272727;
+}
+
+#about {
+  height: 1350px;
+}
+
+#credits {
+  height: 300px;
+  background-color: #737373;
+  color: #272727;
+}
+
+.highlight {
+  color: #1592bf;
+}
+
+#home h2,
+#home h3 {
+  color: #272727;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 1024px) {
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav[role=navigation] {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .navigation {
+    width: 100%;
+    float: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navigation li {
+    float: left;
+    width: 32%;
+    padding: 0;
+  }
+
+  .after {
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero {
+    display: none;
+  }
 }
 
 /* Mobile */
 @media screen and (max-width : 480px) {
-  
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav[role=navigation] {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .navigation {
+    width: 100%;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navigation li {
+    float: left;
+    width: 32%;
+  }
+
+  .after {
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero {
+    display: none;
+  }
 }
