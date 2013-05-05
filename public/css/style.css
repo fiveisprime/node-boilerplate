@@ -48,6 +48,7 @@ a:active {
   width: 100%;
   height: auto;
   background-color: #0c5772;
+  opacity: 0.9;
   z-index: 100;
 }
 
@@ -112,6 +113,10 @@ nav[role=navigation] {
 #credits {
   height: 300px;
   background-color: #737373;
+  color: #272727;
+}
+
+#credits h2 {
   color: #272727;
 }
 
@@ -206,6 +211,7 @@ nav[role=navigation] {
   }
 
   #about {
+    padding-top: 110px;
     height: 2000px;
   }
 }
