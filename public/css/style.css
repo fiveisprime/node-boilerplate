@@ -17,6 +17,7 @@ section {
   position: relative;
   padding: 50px 0;
 }
+
 a {
   -webkit-transition: all 0.3s ease-in-out;
      -moz-transition: all 0.3s ease-in-out;
@@ -28,12 +29,16 @@ a:link {
   color: #bf5f15;
   text-decoration: none;
 }
+a:visited {
+  color: #bf5f15;
+  text-decoration: none;
+}
 a:hover {
   color: #1592bf;
   text-decoration: none;
 }
-a:visited {
-  color: #bf5f15;
+a:active {
+  color: #1592bf;
   text-decoration: none;
 }
 
