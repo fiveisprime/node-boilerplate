@@ -155,9 +155,14 @@ nav[role=navigation] {
   .hero {
     display: none;
   }
+
+  #about {
+    height: 1500px;
+  }
 }
 
 /* Mobile */
+
 @media screen and (max-width : 480px) {
   .logo {
     width: 100%;
@@ -189,5 +194,13 @@ nav[role=navigation] {
 
   .hero {
     display: none;
+  }
+
+  #home {
+    height: 300px;
+  }
+
+  #about {
+    height: 2000px;
   }
 }
