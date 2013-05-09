@@ -34,7 +34,7 @@
         somewhere then change directories into your shiny new local repo and install the dependencies
         by running the following.
       </p>
-      
+
       <div class="code">
         <!-- I know it's not CSS, but the bash class didn't look cool enough -->
         <pre><code class="language-css">
@@ -42,53 +42,56 @@ npm install
 bower install
         </code></pre>
       </div>
-      
+
       <p>
         Next, start the app by running <code>node app.js</code> or <code>npm start</code> in your
         terminal.
       </p>
-      
+
       <p>
         Good job! Now let's see about adding a page to the app. To add a new page, you'll need
         to add a route and a view (a Handlebars template). First, add the following code to
         <span class="highlight">./routes/index.js</span>.
       </p>
-      
+
       <div class="code">
         <small>./routes/index.js</small>
         <pre><code class="language-javascript">
 exports.mypage = function(req, res) {
-  res.render('myview', { title: 'My New Page' });
+  res.render('myview', {
+    title: 'My New Page',
+    name: 'Matt'
+  });
 }
         </code></pre>
       </div>
-      
+
       <p>
         You'll have to create a new file in the <span class="highlight">./views</span> directory named
         <span class="highlight">myview.hbs</span> then add the following markup.
       </p>
-      
+
       <div class="code">
         <small>./routes/myview.hbs</small>
         <pre><code class="language-markup">
 &lt;section&gt;
-  &lt;h1&gt;Whoa! It&#x27;s a new view!&lt;/h1&gt;
+  &lt;h1&gt;Whoa! &#123;&#123;name&#125;&#125; just made a new view!&lt;/h1&gt;
 &lt;/section&gt;
         </code></pre>
       </div>
-      
+
       <p>
         One more change. You created the route and the view, but now those pieces need to be connected.
         Open up <span class="highlight">./app.js</span> and add the following route.
       </p>
-      
+
       <div class="code">
         <small>./app.js</small>
         <pre><code class="language-javascript">
 app.get('/mypage', routes.mypage);
         </code></pre>
       </div>
-      
+
       <p>
         Now start/restart the app and navigate to <a href="localhost:3000/mypage">localhost:3000/mypage</a>
         to see your new page. Super easy, right?
@@ -103,11 +106,26 @@ app.get('/mypage', routes.mypage);
 
 <section id="credits">
   <article class="container">
-    <div class="grid_12 omega">
+    <div class="grid_8 alpha">
       <h2>Credits</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        You are free to use every bit of this code however you like.
       </p>
+      <p>
+        Node.js Boilerplate takes advantage of the following technologies to make life easier on all of us
+      </p>
+      <ul>
+        <li><a href="http://nodejs.org" target="_blank">Node.js</a></li>
+        <li><a href="http://bower.io/" target="_blank">Bower</a></li>
+        <li><a href="http://expressjs.com/" target="_blank">Express.js</a></li>
+        <li><a href="http://handlebarsjs.com/" target="_blank">Handlebars</a></li>
+      </ul>
+      <p>
+        Built by <a href="http://www.fiveisprime.com">@fiveisprime</a> and hosted on <a href="https://modulus.io">Modulus</a>.
+      </p>
+    </div>
+    <div class="grid_4 omega">
+      <img src="/imgs/nodejs-light.png" alt="Powered by Node.js" class="node">
     </div>
   </article>
 </section>

@@ -9,6 +9,7 @@ var oneDay = 86400000;
 // Middleware
 // ----------
 
+app.use(express.compress());
 app.use(express.static(__dirname + '/public', { maxAge: oneDay }));
 app.use(app.router);
 
