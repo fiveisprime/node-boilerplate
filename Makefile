@@ -11,5 +11,14 @@ build:
 	@node_modules/.bin/uglifyjs public/js/app.js -o public/js/app.min.js \
 	--stats
 
+rebuild:
+	@$(MAKE) clean
+	@$(MAKE) build
+
 lint: $(SRC)
 	@node_modules/.bin/jshint $^
+
+clean:
+	@rm -f public/js/app.js
+	@rm -f public/js/app.min.js
+	@rm -f public/css/style.min.css
