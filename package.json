@@ -1,7 +1,7 @@
 {
   "name": "boilerplate",
-  "version": "0.0.0",
-  "description": "Boilerplate app template.",
+  "version": "0.0.1",
+  "description": "Boilerplate Node.js web application template.",
   "main": "app.js",
   "scripts": {
     "start": "node app"
@@ -10,7 +10,11 @@
   "author": "Matt Hernandez <matt@modulus.io>",
   "dependencies": {
     "express": "~3.2.0",
-    "hbs": "~2.1.0",
-    "tracer": "~0.5.1"
+    "hbs": "~2.1.0"
+  },
+  "devDependencies": {
+    "jshint": "~2.1.11",
+    "css-condense": "0.0.6",
+    "uglify-js": "~2.4.0"
   }
 }
