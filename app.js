@@ -1,6 +1,5 @@
 var express = require('express')
   , routes  = require('./routes')
-  , hbs     = require('hbs')
   , tracer  = require('tracer').console();
 
 var app = express();
@@ -19,5 +18,12 @@ app.set('view engine', 'hbs');
 // ------
 
 app.get('/', routes.index);
+
+app.get('/info', function(req, res) {
+  res.json({
+    version: process.version
+  , env: process.env
+  });
+});
 
 app.listen(process.env.PORT || 3000);
