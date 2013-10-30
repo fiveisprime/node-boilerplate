@@ -1,5 +1,3 @@
 exports.index = function(req, res) {
-  res.render('index', {
-    title: 'Node.js Boilerplate'
-  });
+  res.render('index');
 };
